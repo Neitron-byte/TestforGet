@@ -68,7 +68,7 @@ public:
         QByteArray arr = serial2->readAll();
         std::cout << "Send command for voltmeter " << arr.toStdString()<<std::endl;
         if(arr.toStdString() == "READ?\r\n"){
-            emit Write();
+            WriteSerial2();
         }
 
     }
